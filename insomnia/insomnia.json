@@ -1,0 +1,244 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-08-28T01:44:13.577Z",
+  "__export_source": "insomnia.desktop.app:v2021.4.1",
+  "resources": [
+    {
+      "_id": "req_8228ef94f8914ad2892bc5d123324ae0",
+      "parentId": "fld_16de43020a6a4470b81a4ccb1e0f0413",
+      "modified": 1630115008661,
+      "created": 1630111472845,
+      "url": "{{ _.baseURL }}categories/import",
+      "name": "Import",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_f96535debccd44208ec5e3c421129654",
+            "name": "file",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "/Users/ayrtonsouza/Documents/RocketSeat/Ignite/Node/Chapter II/rentalx/insomnia/assets/categories.csv"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_3b99fa626f6e480494ec964af0ccdb19"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630111472845,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_16de43020a6a4470b81a4ccb1e0f0413",
+      "parentId": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "modified": 1629836182882,
+      "created": 1629836182882,
+      "name": "Categories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1629836182882,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "parentId": null,
+      "modified": 1629836128532,
+      "created": 1629836128532,
+      "name": "RentalX",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_81c9d357f14c47d88f923ca0592f1262",
+      "parentId": "fld_16de43020a6a4470b81a4ccb1e0f0413",
+      "modified": 1629853242070,
+      "created": 1629853229640,
+      "url": "{{ _.baseURL }}categories",
+      "name": "List",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1629836194407,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7f4c42c06f774be999d623f69fa4cb8a",
+      "parentId": "fld_16de43020a6a4470b81a4ccb1e0f0413",
+      "modified": 1630036966220,
+      "created": 1629836194357,
+      "url": "{{ _.baseURL }}categories",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Sedan\",\n\t\"description\": \"Categoria SUV\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_433fdecb52d04e0596a4b8f5e70c50ad"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1629836194357,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c990f238ae6d4648a23745de7102057c",
+      "parentId": "fld_584f30bd3a4d407ca21e7712fb5af60e",
+      "modified": 1629943260977,
+      "created": 1629943252207,
+      "url": "{{ _.baseURL }}specifications",
+      "name": "List",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1629836194407,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_584f30bd3a4d407ca21e7712fb5af60e",
+      "parentId": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "modified": 1629943252184,
+      "created": 1629943252184,
+      "name": "Specifications",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1629807451878.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b6e1345307f7412eac30fe2e0c7bba0c",
+      "parentId": "fld_584f30bd3a4d407ca21e7712fb5af60e",
+      "modified": 1629943343062,
+      "created": 1629943252197,
+      "url": "{{ _.baseURL }}specifications",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Cambio automático\",\n\t\"description\": \"automatico\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_433fdecb52d04e0596a4b8f5e70c50ad"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1629836194357,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_a8bd746824e1d8f5959fcaf382fdc3efaac2db14",
+      "parentId": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "modified": 1629836129917,
+      "created": 1629836129917,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1629836129917,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_a8bd746824e1d8f5959fcaf382fdc3efaac2db14",
+      "parentId": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "modified": 1629836129981,
+      "created": 1629836129981,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_15f4bcb5daf54cfd866c3b5327e13cee",
+      "parentId": "wrk_bea667dde8cb46d487fb297f5a521fdf",
+      "modified": 1629836128542,
+      "created": 1629836128542,
+      "fileName": "RentalX",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_16ec2e694f4e486d841080a3b71a4928",
+      "parentId": "env_a8bd746824e1d8f5959fcaf382fdc3efaac2db14",
+      "modified": 1629836168707,
+      "created": 1629836140558,
+      "name": "local",
+      "data": {
+        "baseURL": "http://localhost:3333/"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseURL"
+        ]
+      },
+      "color": "#fff1a8",
+      "isPrivate": false,
+      "metaSortKey": 1629836140558,
+      "_type": "environment"
+    }
+  ]
+}
