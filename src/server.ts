@@ -1,6 +1,8 @@
+import 'reflect-metadata';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
+import './shared/container';
 import swaggerFile from './docs/swagger.json';
 import { router } from './routes';
 
@@ -10,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
-app.use(router);
+app.use('/v1', router);
 
 app.listen(3333, () =>
   console.log(
