@@ -10,6 +10,18 @@
       "sourceMapPathOverrides": {
         "/usr/app/*": "${workspaceRoot}/*"
       }
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Local: Attach to Node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/server.ts",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
     }
   ]
 }
