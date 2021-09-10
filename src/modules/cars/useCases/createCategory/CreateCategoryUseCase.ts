@@ -1,4 +1,4 @@
-import { AppError } from 'src/errors/AppError';
+import { AppError } from '../../../../errors/AppError';
 import { inject, injectable } from 'tsyringe';
 
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
@@ -13,7 +13,7 @@ export class CreateCategoryUseCase {
   constructor(
     @inject('CategoriesRepository')
     private categoriesRepository: ICategoriesRepository
-  ) {}
+  ) { }
 
   async execute({ name, description }: IRequest): Promise<void> {
     const categoryAlreadyExists = await this.categoriesRepository.findByName(
