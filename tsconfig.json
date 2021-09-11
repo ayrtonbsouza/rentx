@@ -3,13 +3,33 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "paths": {
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@middlewares/*": [
+        "middlewares/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@errors/*": [
+        "errors/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ]
+    }
   }
 }

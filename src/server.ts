@@ -31,9 +31,6 @@ app.use(
 
 app.listen(3333, () =>
   console.log(
-    '\x1b[35m',
-    '🚀 Server started and listening in:',
-    '\x1b[36m',
-    'http://localhost:3333/'
+    `\x1b[35m 🚀 Server started and listening in:\x1b[36m http://localhost:3333/`
   )
 );
