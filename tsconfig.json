@@ -19,13 +19,13 @@
         "utils/*"
       ],
       "@middlewares/*": [
-        "middlewares/*"
+        "shared/infra/http/middlewares/*"
       ],
       "@config/*": [
         "config/*"
       ],
       "@errors/*": [
-        "errors/*"
+        "shared/errors/*"
       ],
       "@shared/*": [
         "shared/*"
