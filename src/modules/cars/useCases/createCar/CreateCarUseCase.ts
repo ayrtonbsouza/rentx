@@ -1,19 +1,9 @@
 import { inject, injectable } from 'tsyringe';
 
 import { AppError } from '@errors/AppError';
+import { ICreateCarDTO } from '@modules/cars/dtos/ICreateCarDTO';
 import { Car } from '@modules/cars/infra/typeorm/entities/Car';
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
-
-interface IRequest {
-  name: string;
-  description;
-  daily_rate: number;
-  license_plate: string;
-  fine_amount: number;
-  brand: string;
-  model: string;
-  category_id: string;
-}
 
 @injectable()
 export class CreateCarUseCase {
@@ -31,7 +21,7 @@ export class CreateCarUseCase {
     brand,
     model,
     category_id,
-  }: IRequest): Promise<Car> {
+  }: ICreateCarDTO): Promise<Car> {
     const carAlreadyExists = await this.carsRepository.findByLicensePlate(
       license_plate
     );

@@ -1,6 +1,6 @@
 export interface ICreateCarDTO {
   name: string;
-  description;
+  description: string;
   daily_rate: number;
   license_plate: string;
   fine_amount: number;
