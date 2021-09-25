@@ -7,6 +7,6 @@ export interface ICarsRepository {
   findAvailable(
     brand?: string,
     category_id?: string,
-    model?: string
+    name?: string
   ): Promise<Car[]>;
 }
