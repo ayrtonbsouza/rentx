@@ -20,6 +20,7 @@ describe('Create Car Specification', () => {
 
   it('should be able to add a new specification to a car', async () => {
     const car = await carsRepositoryInMemory.create({
+      id: 'any-random-id',
       name: 'Car Name',
       description: 'Car Description',
       daily_rate: 100,
@@ -30,8 +31,18 @@ describe('Create Car Specification', () => {
       category_id: 'Car Category',
     });
 
-    const specifications_id = ['0987654321'];
-    await createCarSpecification.execute({ car_id: car.id, specifications_id });
+    const specification = await specificationsRepositoryInMemory.create({
+      name: 'Specification Name',
+      description: 'Specification Description',
+    });
+
+    const specificationsCar = await createCarSpecification.execute({
+      car_id: car.id,
+      specifications_id: [specification.id],
+    });
+
+    expect(specificationsCar).toHaveProperty('specifications');
+    expect(specificationsCar.specifications.length).toBe(1);
   });
 
   it('should not be able to add a new specification to a unexistent car', async () => {

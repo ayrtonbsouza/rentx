@@ -10,4 +10,5 @@ export interface ICreateCarDTO {
   model: string;
   category_id: string;
   specifications?: Specification[];
+  id?: string;
 }
